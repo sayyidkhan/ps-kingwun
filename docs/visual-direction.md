@@ -77,7 +77,41 @@ documentary evidence of a real transaction. Do not change identity.
 - The motion control stops scripted reveals and hero motion.
 - Device reduced-motion preferences disable animation and smooth scrolling.
 
-## Next real content to collect
+## Interactive architecture and motion — September 2026
+
+The Perspective Lab adds a custom Three.js courtyard pavilion, not a real
+listing or commissioned architectural plan. It uses procedural geometry,
+glass, timber screens, furniture, a pool, trees, and daylight/dusk lighting.
+Visitors can drag horizontally, rotate with keyboard-accessible buttons,
+switch to an overhead floor-plan view, or separate the roof from the building.
+
+Three.js loads near the viewport. Device pixel ratio is capped at 1.5,
+rendering stops offscreen, and an architectural photo remains available
+when WebGL cannot initialise. The camera adapts to narrow screens.
+The shared motion control and reduced-motion preference stop auto-orbit
+and animated transitions; explicit controls still work without animation.
+
+Additional motion: a slow typographic loop, desktop-only hero scroll
+parallax, and photographic clip reveals. All respect the same motion setting.
+Ryan Serhant's site (https://ryanserhant.com/) informed the emphasis on
+media and distinct work/story sections; the interactive architectural
+model is an original feature, not a claim about his site's technology.
+
+### Next real content to collect
+
+The second editorial pass replaces the small-name hero and moving slogan
+with an oversized Oswald masthead, a shorter positioning statement, and
+three staggered visual chapter links. Near-black, ivory, and architectural
+green establish contrast; serif accents remain for the personal narrative.
+The 3D lab now follows the introduction to King Wun instead of preceding it.
+These choices apply the luxury design skill's bold hierarchy and restrained
+palette while preserving keyboard links, visible focus, motion controls,
+and the existing brief builder.
+
+Responsive acceptance: no horizontal page overflow at 320, 390, or 768px;
+mobile chapter links remain in normal document flow; all three chapter
+links resolve to real sections. No invented credentials, results, listings,
+or testimonials are added. Build and TypeScript checks pass.
 
 1. Verified agency, registration, contact route, and actual service scope.
 2. Property photography with publication permission and clear listing status.
