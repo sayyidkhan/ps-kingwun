@@ -1,4 +1,4 @@
-# King Wun: photographic website direction
+# Khin Woon: photographic website direction
 
 ## Reference and adaptation
 
@@ -21,10 +21,10 @@ All generated media used the built-in image generator. Originals are retained.
 The architectural setting is fictional. Visible captions identify AI-styled
 portraits and illustrative architecture.
 
-- Hero: `assets/kingwun-architectural-hero-v1.png`. Previously approved
-  architectural portrait, anchored to the original King Wun photograph.
+- Hero: `assets/khin-woon-architectural-hero-v1.png`. Previously approved
+  architectural portrait, anchored to the original Khin Woon photograph.
 - Architecture: `assets/architectural-courtyard-v1.png`.
-- Working portrait: `assets/kingwun-working-portrait-v1.png`.
+- Working portrait: `assets/khin-woon-working-portrait-v1.png`.
 
 ### Architecture prompt
 
@@ -46,7 +46,7 @@ not a property advertised for sale. Output one image only.
 ### Working portrait prompt
 
 Use case identity-preserve. Generate ONE companion environmental portrait,
-landscape 3:2, for King Wun's real estate personal brand. Image 1 is
+landscape 3:2, for Khin Woon's real estate personal brand. Image 1 is
 authoritative actual facial identity, Image 2 establishes wardrobe,
 photographic atmosphere and architecture. Keep his real face, hair, clear
 round glasses, age, warm skin, full cheeks, natural anatomy; never genericize
@@ -103,7 +103,7 @@ The second editorial pass replaces the small-name hero and moving slogan
 with an oversized Oswald masthead, a shorter positioning statement, and
 three staggered visual chapter links. Near-black, ivory, and architectural
 green establish contrast; serif accents remain for the personal narrative.
-The 3D lab now follows the introduction to King Wun instead of preceding it.
+The 3D lab now follows the introduction to Khin Woon instead of preceding it.
 These choices apply the luxury design skill's bold hierarchy and restrained
 palette while preserving keyboard links, visible focus, motion controls,
 and the existing brief builder.
@@ -117,7 +117,7 @@ or testimonials are added. Build and TypeScript checks pass.
 2. Property photography with publication permission and clear listing status.
 3. Two actual client scenarios: need, process, and evidenced outcome.
 4. A short authentic introduction or property walkthrough video.
-5. Specific tools or workflows King Wun genuinely uses.
+5. Specific tools or workflows Khin Woon genuinely uses.
 6. Real business projects, if entrepreneurship is to become a distinct section.
 
 Replace concept imagery with documentary work as this material becomes

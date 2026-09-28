@@ -19,10 +19,10 @@ export default function DecisionBrief() {
   const [propertyType, setPropertyType] = useState("Not sure yet");
   const [timeframe, setTimeframe] = useState("Just exploring");
   const guide = guides[intent];
-  const message = `Hi King Wun, I’m ${name.trim()}. I’d like to find out more about my property options.${phone.trim() ? `\nPhone: ${phone.trim()}` : ""}${email.trim() ? `\nEmail: ${email.trim()}` : ""}\n\nI’m interested in: ${intent}\nLocation: ${market}\nProperty type: ${propertyType}\nTimeframe: ${timeframe}${notes.trim() ? `\n\nMy priorities / questions:\n${notes.trim()}` : ""}\n\nCould we chat about the next steps?`;
+  const message = `Hi Khin Woon, I’m ${name.trim()}. I’d like to find out more about my property options.${phone.trim() ? `\nPhone: ${phone.trim()}` : ""}${email.trim() ? `\nEmail: ${email.trim()}` : ""}\n\nI’m interested in: ${intent}\nLocation: ${market}\nProperty type: ${propertyType}\nTimeframe: ${timeframe}${notes.trim() ? `\n\nMy priorities / questions:\n${notes.trim()}` : ""}\n\nCould we chat about the next steps?`;
   return <form className="decision-brief" action="https://wa.me/60143015319" method="get" target="_blank" rel="noopener noreferrer" aria-label="Property enquiry">
     <input type="hidden" name="text" value={message} />
-    <div className="brief-card-top"><span>CONNECT WITH KING WUN</span><span aria-hidden="true">↗</span></div>
+    <div className="brief-card-top"><span>CONNECT WITH KHIN WOON</span><span aria-hidden="true">↗</span></div>
     <fieldset className="enquiry-details"><legend>Your details</legend>
       <div className="enquiry-fields">
         <label className="enquiry-field enquiry-wide" htmlFor="enquiry-name">Full name <span>Required</span><input id="enquiry-name" autoComplete="name" required pattern={".*\\S.*"} title="Please enter your name." maxLength={100} value={name} onChange={event => setName(event.target.value)} placeholder="How should I address you?" /></label>
@@ -37,8 +37,8 @@ export default function DecisionBrief() {
       <label className="enquiry-field" htmlFor="enquiry-timeframe">Timeframe<select id="enquiry-timeframe" value={timeframe} onChange={event => setTimeframe(event.target.value)}><option>Just exploring</option><option>Within 3 months</option><option>3–6 months</option><option>6–12 months</option><option>More than a year</option></select></label>
     </div>
     <div className="brief-guidance enquiry-guidance" aria-live="polite"><h3>{guide.title}</h3></div>
-    <label className="notes-label" htmlFor="priorities">What would you like to discuss? <span>Optional</span></label><textarea id="priorities" maxLength={1500} value={notes} onChange={event => setNotes(event.target.value)} placeholder="Tell King Wun about your preferred home, budget, timing or questions…" rows={3} />
-    <button type="submit" className="button whatsapp-button" aria-describedby="whatsapp-hint">Chat with King Wun on WhatsApp <span aria-hidden="true">↗</span></button>
+    <label className="notes-label" htmlFor="priorities">What would you like to discuss? <span>Optional</span></label><textarea id="priorities" maxLength={1500} value={notes} onChange={event => setNotes(event.target.value)} placeholder="Tell Khin Woon about your preferred home, budget, timing or questions…" rows={3} />
+    <button type="submit" className="button whatsapp-button" aria-describedby="whatsapp-hint">Chat with Khin Woon on WhatsApp <span aria-hidden="true">↗</span></button>
     <p className="brief-contact-hint" id="whatsapp-hint">Your details will be included in WhatsApp. Review your message before sending.</p>
     <p className="brief-contact-number">Prefer a call? <a href="tel:+60143015319">+60 14-301 5319</a></p>
   </form>;

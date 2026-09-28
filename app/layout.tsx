@@ -3,9 +3,9 @@ import "./globals.css";
 import "./editorial.css";
 
 export const metadata: Metadata = {
-  title: "King Wun — Property Moves, Made Smarter",
+  title: "Khin Woon — Property Moves, Made Smarter",
   description:
-    "King Wun combines market context, structured thinking, and strong negotiation to help clients navigate property across Sarawak and Singapore.",
+    "Khin Woon combines market context, structured thinking, and strong negotiation to help clients navigate property across Sarawak and Singapore.",
 };
 
 export const viewport: Viewport = {

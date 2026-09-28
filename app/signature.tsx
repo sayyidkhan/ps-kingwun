@@ -1,30 +1,40 @@
 import type { CSSProperties } from "react";
 
-// Original signature-style lettering for the brand, not a reproduction of a legal signature.
+// Original pen trajectories, in writing order. Each path follows the centre of
+// a letter so dash animation traces the ink, rather than revealing a text box.
 const strokes = [
-  { d: "M12 100 C35 100 65 50 77 24 C87 3 99 13 88 35 C75 59 55 95 48 112", delay: .3, duration: .7 },
-  { d: "M124 19 C101 41 76 63 57 74 C75 64 83 80 91 94 C98 108 108 112 121 100", delay: .9, duration: .65 },
-  { d: "M119 68 C115 79 109 95 115 98 C122 103 135 82 139 71 L130 99 C139 79 149 64 156 69 C163 75 144 99 155 98 C163 98 169 87 174 79", delay: 1.2, duration: .65 },
-  { d: "M197 72 C183 59 164 89 174 98 C182 105 194 84 199 70 C194 90 188 120 176 133 C163 147 152 137 165 125 C175 116 198 110 215 91", delay: 1.8, duration: .65 },
-  { d: "M243 48 C255 24 269 22 264 45 C260 65 244 111 251 106 C266 91 282 61 290 44 C283 65 270 109 281 104 C304 91 319 49 319 28 C319 16 311 26 312 40 C313 55 325 61 336 53", delay: 2.4, duration: .8 },
-  { d: "M329 72 C322 86 314 106 326 99 C335 94 342 81 347 70 C343 82 334 101 343 99 C353 96 362 80 367 69 L357 99 C369 77 379 63 385 69 C391 76 372 99 383 99 C396 99 408 85 418 76", delay: 3.1, duration: .65 },
-  { d: "M121 51 L123 48", delay: 3.7, duration: .12 },
-  { d: "M419 76 C449 49 463 52 445 73 C416 107 226 129 96 130 C70 130 65 138 96 139 C210 142 346 112 433 119", delay: 3.85, duration: 1.15 },
+  { letter: "K stem", d: "M16 83 C-2 51 39 46 62 55 C79 63 63 89 43 111 C37 119 31 123 35 111 L91 23 C100 10 109 13 99 28 C83 50 66 70 55 90", start: 4, end: 13 },
+  { letter: "K arm", d: "M119 29 C103 39 73 68 55 83 C70 70 78 79 82 96 C87 119 100 116 112 99", start: 13, end: 20 },
+  { letter: "h", d: "M109 101 C121 75 146 35 144 26 C141 13 128 36 122 52 L101 112 C115 84 126 74 133 79 C141 86 119 109 130 111 C138 113 146 101 151 94", start: 20, end: 27 },
+  { letter: "i", d: "M153 80 C149 90 139 110 147 111 C154 113 164 98 168 90", start: 27, end: 31 },
+  { letter: "n", d: "M173 79 L160 112 C174 85 186 72 192 80 C197 87 176 109 185 111 C197 114 211 99 221 89", start: 31, end: 37 },
+  { letter: "W", d: "M237 64 C219 43 237 28 259 32 C280 36 266 63 253 92 C248 104 245 118 252 112 C270 95 292 52 300 34 C291 65 276 114 286 112 C302 107 331 57 338 28 C341 16 334 13 330 26 C324 44 336 54 348 48", start: 37, end: 49 },
+  { letter: "first o", d: "M347 82 C331 73 314 103 325 111 C336 119 353 91 347 82 C341 74 337 89 348 93 C356 96 362 90 366 85", start: 49, end: 54 },
+  { letter: "second o", d: "M379 82 C363 73 346 103 357 111 C368 119 385 91 379 82 C373 74 369 89 380 93 C388 96 394 90 398 85", start: 54, end: 59 },
+  { letter: "final n", d: "M403 80 L391 112 C405 85 418 72 424 80 C430 88 407 110 418 111 C433 114 450 96 466 81", start: 59, end: 65 },
+  { letter: "i dot", d: "M158 64 L160 61", start: 65, end: 67 },
+  { letter: "flourish", d: "M469 82 C499 55 508 61 491 79 C448 121 193 150 79 139 C56 137 58 132 83 131 C204 126 334 129 446 119", start: 67, end: 78 },
 ];
+
+// Preserve the existing pen speed while extending the completed-signature hold.
+const originalTimelineSeconds = 6.8;
+const holdSeconds = 4;
+const cycleSeconds = originalTimelineSeconds * strokes[strokes.length - 1].end / 100 + holdSeconds;
+const timingScale = originalTimelineSeconds / cycleSeconds;
 
 export default function Signature() {
   return <div className="signature-lockup">
     <div className="signature-title">
-    <span className="sr-only">King Wun</span>
-    <svg className="signature-mark" viewBox="0 -12 480 185" fill="none" aria-hidden="true" focusable="false">
-      <g transform="translate(0 20) rotate(-4 235 78) skewX(-5)">
-      {strokes.map((stroke, i) => <path className={i === strokes.length - 1 ? "signature-flourish" : "signature-ink"} key={i} d={stroke.d} pathLength="1" style={{ "--ink-delay": `${stroke.delay}s`, "--ink-duration": `${stroke.duration}s` } as CSSProperties} />)}
-      {/* Pressure accents on downstrokes give the lettering a pen-drawn contrast. */}
-      <path className="signature-pressure" d="M83 44 C70 67 55 95 49 111" pathLength="1" style={{ "--ink-delay": ".65s", "--ink-duration": ".35s" } as CSSProperties} />
-      <path className="signature-pressure" d="M72 73 C82 79 85 91 94 101" pathLength="1" style={{ "--ink-delay": "1.2s", "--ink-duration": ".35s" } as CSSProperties} />
-      <path className="signature-pressure" d="M119 70 L112 89 M139 72 L131 96 M198 74 C193 94 187 116 178 130" pathLength="1" style={{ "--ink-delay": "1.5s", "--ink-duration": ".85s" } as CSSProperties} />
-      <path className="signature-pressure" d="M263 46 C257 66 247 97 251 104 M288 49 C281 72 275 95 280 103" pathLength="1" style={{ "--ink-delay": "2.65s", "--ink-duration": ".55s" } as CSSProperties} />
-      <path className="signature-pressure" d="M329 74 C323 87 320 96 324 99 M345 75 L339 93 M366 72 L359 95" pathLength="1" style={{ "--ink-delay": "3.3s", "--ink-duration": ".45s" } as CSSProperties} />
+    <span className="sr-only">Khin Woon</span>
+    <svg className="signature-mark" viewBox="-10 0 540 180" aria-hidden="true" focusable="false" style={{ "--signature-cycle": `${cycleSeconds}s` } as CSSProperties}>
+      <g transform="translate(5 16) rotate(-3 250 80)">
+        {strokes.map(stroke => <path
+          key={stroke.letter}
+          className={stroke.letter === "flourish" ? "signature-stroke signature-flourish" : "signature-stroke"}
+          d={stroke.d}
+          pathLength="1"
+          style={{ "--stroke-start": `${stroke.start * timingScale}%`, "--stroke-end": `${stroke.end * timingScale}%` } as CSSProperties}
+        />)}
       </g>
     </svg>
     </div>

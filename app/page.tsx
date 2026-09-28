@@ -1,10 +1,10 @@
 import Image from "next/image";
-import heroPortrait from "@/assets/kingwun-architectural-hero-v1.png";
+import heroPortrait from "@/assets/khin-woon-architectural-hero-v1.png";
 import courtyard from "@/assets/architectural-courtyard-v1.png";
-import workingPortrait from "@/assets/kingwun-working-portrait-v1.png";
-import processListening from "@/assets/process-listening-kingwun-v2.png";
-import processComparison from "@/assets/process-comparison-kingwun-v2.png";
-import processPreparation from "@/assets/process-preparation-kingwun-v2.png";
+import workingPortrait from "@/assets/khin-woon-working-portrait-v1.png";
+import processListening from "@/assets/process-listening-khin-woon-v2.png";
+import processComparison from "@/assets/process-comparison-khin-woon-v2.png";
+import processPreparation from "@/assets/process-preparation-khin-woon-v2.png";
 import viewingNote from "@/assets/note-viewing-v1.png";
 import comparisonNote from "@/assets/note-comparison-v1.png";
 import conversationNote from "@/assets/note-conversation-v1.png";
@@ -32,12 +32,12 @@ export default function Home() {
       <a className="skip-link" href="#main">Skip to content</a>
       <div id="top" />
       <header className="site-header wrap">
-        <a className="brand" href="#top" aria-label="King Wun, home">KING WUN<span>PROPERTY · PEOPLE · POSSIBILITY</span></a>
-        <nav aria-label="Main navigation"><a href="#about">Meet King Wun</a><a href="#perspective">Perspective</a><a href="#approach">The approach</a></nav>
+        <a className="brand" href="#top" aria-label="Khin Woon, home">KHIN WOON<span>PROPERTY · PEOPLE · POSSIBILITY</span></a>
+        <nav aria-label="Main navigation"><a href="#about">Meet Khin Woon</a><a href="#perspective">Perspective</a><a href="#approach">The approach</a></nav>
       </header>
       <main id="main">
         <section className="cover-hero" aria-labelledby="hero-title">
-          <div className="hero-image"><Image src={heroPortrait} alt="AI-styled portrait of King Wun in a contemporary architectural setting" fill preload sizes="100vw" /></div>
+          <div className="hero-image"><Image src={heroPortrait} alt="AI-styled portrait of Khin Woon in a contemporary architectural setting" fill preload sizes="100vw" /></div>
           <div className="hero-shade" />
           <div className="cover-intro wrap">
             <p className="eyebrow">REAL ESTATE. HUMAN CONNECTION. FORWARD THINKING.</p>
@@ -52,7 +52,7 @@ export default function Home() {
           <div className="editorial-intro" data-reveal><p className="eyebrow">A DIFFERENT POINT OF VIEW</p><h2 id="chapters-title">Property is the asset.<br /><em>People are the point.</em></h2><p>Clear thinking. Modern tools. A personal approach to the places—and decisions—that shape your life.</p></div>
           <div className="chapter-gallery">
             <a className="chapter-card" href="#perspective" data-reveal><Image src={courtyard} alt="" fill sizes="(max-width:600px) 90vw, 40vw" /><span className="chapter-kicker">01 / THE PLACES</span><span className="chapter-card-title">See beyond<br />the address.<i aria-hidden="true">↗</i></span><span className="chapter-detail">Space, light & the way you live</span></a>
-            <a className="chapter-card chapter-person" href="#about" data-reveal><Image src={workingPortrait} alt="" fill sizes="(max-width:600px) 90vw, 32vw" /><span className="chapter-kicker">02 / THE PERSON</span><span className="chapter-card-title">People first.<br />Always.<i aria-hidden="true">↗</i></span><span className="chapter-detail">Meet King Wun</span></a>
+            <a className="chapter-card chapter-person" href="#about" data-reveal><Image src={workingPortrait} alt="" fill sizes="(max-width:600px) 90vw, 32vw" /><span className="chapter-kicker">02 / THE PERSON</span><span className="chapter-card-title">People first.<br />Always.<i aria-hidden="true">↗</i></span><span className="chapter-detail">Meet Khin Woon</span></a>
             <a className="chapter-card chapter-lab" href="#spatial" data-reveal><svg className="chapter-drawing" viewBox="0 0 300 340" fill="none" aria-hidden="true"><path d="M30 210 145 270 270 195 155 140Z M30 150 145 210 270 135 155 80Z M30 150v60m115 0v60m125-135v60M30 100 145 160 270 85 155 30Z M30 100v50m115 10v50m125-125v50"/><path d="m70 172 115-70m-76 91 115-69M68 231l125-74m-85 94 125-75" opacity=".35"/></svg><span className="chapter-kicker">03 / THE POSSIBILITIES</span><span className="chapter-card-title">A new<br />dimension.<i aria-hidden="true">↗</i></span><span className="chapter-detail">Enter the interactive 3D lab</span></a>
           </div>
           <p className="chapter-provenance">EDITORIAL IMAGERY · AI-STYLED PORTRAITS & ILLUSTRATIVE ARCHITECTURE</p>
@@ -66,8 +66,8 @@ export default function Home() {
         </section>
 
         <section className="about-section section-pad" id="about" aria-labelledby="about-title"><div className="wrap about-grid">
-          <figure className="working-photo" data-reveal><div className="photo-frame"><Image src={workingPortrait} alt="AI-styled editorial portrait of King Wun seated with a laptop and architectural plans" sizes="(max-width:700px) 100vw, 48vw" /></div><figcaption>AI-STYLED EDITORIAL PORTRAIT</figcaption></figure>
-          <div className="about-copy" data-reveal><p className="eyebrow">02 / MEET KING WUN</p><h2 id="about-title">Warm with people.<br /><em>Sharp on the details.</em></h2><p className="about-lead">A good property conversation starts with listening.</p><p>Your next move carries plans, priorities, and questions. I help bring those into focus, organise the options, and prepare for the conversations ahead.</p><p>I believe modern tools should make the work clearer and the service more personal. Technology supports the process; judgement and relationships guide it.</p><div className="signature-row"><span className="signature">King Wun</span><span className="signature-role">REAL ESTATE NEGOTIATOR<br />SARAWAK + SINGAPORE</span><a className="text-link" href="#approach">Inside the approach <span aria-hidden="true">↗</span></a></div></div>
+          <figure className="working-photo" data-reveal><div className="photo-frame"><Image src={workingPortrait} alt="AI-styled editorial portrait of Khin Woon seated with a laptop and architectural plans" sizes="(max-width:700px) 100vw, 48vw" /></div><figcaption>AI-STYLED EDITORIAL PORTRAIT</figcaption></figure>
+          <div className="about-copy" data-reveal><p className="eyebrow">02 / MEET KHIN WOON</p><h2 id="about-title">Warm with people.<br /><em>Sharp on the details.</em></h2><p className="about-lead">A good property conversation starts with listening.</p><p>Your next move carries plans, priorities, and questions. I help bring those into focus, organise the options, and prepare for the conversations ahead.</p><p>I believe modern tools should make the work clearer and the service more personal. Technology supports the process; judgement and relationships guide it.</p><div className="signature-row"><span className="signature">Khin Woon</span><span className="signature-role">REAL ESTATE NEGOTIATOR<br />SARAWAK + SINGAPORE</span><a className="text-link" href="#approach">Inside the approach <span aria-hidden="true">↗</span></a></div></div>
         </div></section>
 
         <Spatial />
@@ -92,7 +92,7 @@ export default function Home() {
 
         <section className="brief-section section-pad" id="your-move" aria-labelledby="brief-title"><div className="wrap"><div className="section-label" data-reveal><span>05 / YOUR NEXT MOVE</span><span>START WITH WHAT MATTERS</span></div><div className="brief-layout"><div className="brief-intro" data-reveal><h2 id="brief-title">Let’s start with<br /><em>your next chapter.</em></h2><p>Buying, selling, or still exploring? Share what you have in mind and connect with me directly on WhatsApp. Let’s talk through your options.</p><span className="brief-aside">THOUGHTFUL QUESTIONS. CLEARER POSSIBILITIES.</span></div><DecisionBrief /></div></div></section>
       </main>
-      <footer className="site-footer wrap"><div className="footer-top"><div className="footer-identity"><a href="#top" className="footer-name">KING WUN.</a><p>Property. People. <em>Possibility.</em></p></div><a className="text-link" href="#top">Back to top <span aria-hidden="true">↑</span></a></div><div className="footer-bottom"><p className="footer-credentials"><span>Real estate negotiator</span><span>Sarawak ↔ Singapore</span></p></div></footer>
+      <footer className="site-footer wrap"><div className="footer-top"><div className="footer-identity"><a href="#top" className="footer-name">KHIN WOON.</a><p>Property. People. <em>Possibility.</em></p></div><a className="text-link" href="#top">Back to top <span aria-hidden="true">↑</span></a></div><div className="footer-bottom"><p className="footer-credentials"><span>Real estate negotiator</span><span>Sarawak ↔ Singapore</span></p></div></footer>
       <Motion />
     </>
   );
